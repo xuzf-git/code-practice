@@ -9,10 +9,6 @@ typedef struct Node
 
 List erase(List g)
 {
-    // if (g->next == g)
-    // {
-    //     return NULL;
-    // }
     List erase_one = g->next->next;
     List next_begin = erase_one->next;
     g->next->next = next_begin;
@@ -47,6 +43,6 @@ int main(int argc, char const *argv[])
         tail = erase(tail);
     }
     cout << tail->id << endl;
-    free(tail);    
+    free(tail);
     return 0;
 }
